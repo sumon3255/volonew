@@ -344,3 +344,13 @@ html{
 .ms-auto{
   margin-right: 300px;
 }
+
+
+
+ @media only screen and (max-width: 1273px) {
+  #logo img{
+    height: 80px;
+   
+    margin-left: -50px;
+   }
+} 
