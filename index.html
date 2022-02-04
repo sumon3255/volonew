@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Your Ticket|volobooking.netlify.app</title>
+    <title>Book Your Ticket|
+volobooking.com</title>
     <link href='https://fonts.googleapis.com/css?family=Baloo Bhai 2' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
@@ -54,119 +55,414 @@
     </div>
 </nav>
 
-  <div class="container my-5">
+<div class="container my-5">
     
-       <br>
-       <br>
-       <br>
-       <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
 
-          <div  class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Corona Virus [Covid 19]</strong> may alert your travel <a href="https://jamanetwork.com/journals/jama/pages/coronavirus-alert">Learn More</a>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-        <h1 style="text-align: left;">Compare and book flight with ease</h1> <p style="text-align: left;">Discover your next dream destination</p></div>
-    <div class="container">
-      <div class="shadow-none p-3 col-md-2 mb-5 bg-light rounded"><i class="fas fa-plane-departure" style="font-size: 30px;"> Flights</i></div>
-        <form name="google-sheet"  method="post" autocomplete="off" style="background-color: rgb(214, 223, 231);" class="form-control">
-     
-            <div class="form-group">
-              <div class="form-checkbox">
-                <label for="roundtrip">
-                  <input type="radio" id="roundtrip" value="Roundtrip" name="flight-type">
-                  <span></span>Roundtrip
-                </label>
-                <label for="one-way">
-                  <input type="radio" id="one-way" name="flight-type" value="One way">
-                  <span></span>One way
-                </label>
+     <div  class="alert alert-warning alert-dismissible fade show" role="alert">
+       <strong>Corona Virus [Covid 19]</strong> may alert your travel <a href="https://jamanetwork.com/journals/jama/pages/coronavirus-alert">Learn More</a>
+       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>
+   <h1 style="text-align: left;">Compare and book flight with ease</h1> <p style="text-align: left;">Discover your next dream destination</p></div>
+<div class="container">
+ <div class="shadow-none p-3 col-md-2 mb-5 bg-light rounded"><i class="fas fa-plane-departure" style="font-size: 30px;"> Flights</i></div>
+ 
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button  style="font-family: 'Heebo';" class="btn btn-primary" id="but1" onclick="myfunc1()">Round-trip</button>
+  <button style="font-family: 'Heebo';" class="btn btn-primary" id="but1" onclick="myfunc2()">One-way</button>
+  <button  style="font-family: 'Heebo';" class="btn btn-primary" id="but1" onclick="myfunc3()">Multi-city</button>
+</div>
+ 
+
+ <div id="show1">
+<p>Round-trip</p> 
+ <form name="google-sheet"  method="post" autocomplete="off" style="background-color: rgb(214, 223, 231);" class="form-control">
+
+       <div class="form-group">
+         <div class="form-checkbox">
+    
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-md-6">
+           <div class="form-group">
+             <span class="form-label">Flying from</span>
+             <i class="fas fa-plane-departure"></i>
+             <input class="form-control" id="myInput" name="from" type="text" placeholder="City or airport">
+           </div>
+         </div>
+         <div class="col-md-6">
+           <div class="form-group">
+             <span class="form-label">Flyning to</span>
+             <i class="fas fa-plane-departure"></i>
+             <input class="form-control"  id="myInput1" name="to" type="text" placeholder="City or airport">
+           </div>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-md-3">
+           <div class="form-group">
+             <span class="form-label">Departing</span>
+             <input class="form-control" name="depart" type="date" required>
+           </div>
+         </div>
+         <div class="col-md-3">
+           <div class="form-group">
+             <span class="form-label">Returning</span>
+             <input class="form-control" name="return" type="date" required>
+           </div>
+         </div>
+         <div class="col-md-2">
+           <div class="form-group">
+             <span class="form-label">Adults (18+)</span>
+             <select class="form-control" name="adults">
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5</option>
+               <option>6</option>
+             </select>
+             <span class="select-arrow"></span>
+           </div>
+         </div>
+         <div class="col-md-2">
+           <div class="form-group">
+             <span class="form-label">Children (0-6)</span>
+             <select class="form-control" name="children">
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5</option>
+               <option>6</option>
+             </select>
+             <span class="select-arrow"></span>
+           </div>
+         </div>
+         <div class="col-md-2">
+           <div class="form-group">
+             <span class="form-label">Type</span>
+             <select class="form-control" name="type">
+               <option>Business</option>
+               <option>Economy</option>
               
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <span class="form-label">Flying from</span>
-                  <i class="fas fa-plane-departure"></i>
-                  <input class="form-control" id="myInput" name="from" type="text" placeholder="City or airport">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <span class="form-label">Flyning to</span>
-                  <i class="fas fa-plane-departure"></i>
-                  <input class="form-control"  id="myInput1" name="to" type="text" placeholder="City or airport">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3">
-                <div class="form-group">
-                  <span class="form-label">Departing</span>
-                  <input class="form-control" name="depart" type="date" required>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="form-group">
-                  <span class="form-label">Returning</span>
-                  <input class="form-control" name="return" type="date" required>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <span class="form-label">Adults (18+)</span>
-                  <select class="form-control" name="adults">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                  </select>
-                  <span class="select-arrow"></span>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <span class="form-label">Children (0-6)</span>
-                  <select class="form-control" name="children">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                  </select>
-                  <span class="select-arrow"></span>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-          
+             </select>
+             <span class="select-arrow"></span>
+           </div>
+         </div>
+       <div class="row">
+     
 
-              <div class="col-md-3">
-                <div class="form-group">
-                  <span class="form-label">Name</span>
-                  <input class="form-control" type="text" name="name" placeholder="Enter Your Name">
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="form-group">
-                  <span class="form-label">Email</span>
-                  <input class="form-control" type="email" name="email" placeholder="Enter Your email">
-                </div>
-              </div>
-              <div class="col-md-3">
-            
-                  <button class="btn btn-primary" type="submit" style="margin-left: 8px; margin-top : 25px; font-family: 'Heebo';">Submit</button>
-                </div>
-              </div>
-            </div>
-          </form>
+         <div class="col-md-3">
+           <div class="form-group">
+             <span class="form-label">Name</span>
+             <input class="form-control" type="text" name="name" placeholder="Enter Your Name">
+           </div>
+         </div>
+         <div class="col-md-3">
+           <div class="form-group">
+             <span class="form-label">Email</span>
+             <input class="form-control" type="email" name="email" placeholder="Enter Your email">
+           </div>
+         </div>
+         <div class="col-md-3">
+       
+             <button class="btn btn-primary" type="submit" style="margin-left: 8px; margin-top : 25px; font-family: 'Heebo';">Submit</button>
+           </div>
+         </div>
+       </div>
+     </form>
+
+</div>
+</div>
+
+</div>
+
+<!-- One-way -->
+
+<div class="container my-5" id="show2">
+
+  <p>One-way</p> 
+
+
+<form name="google-sheet3"  method="post" autocomplete="off" style="background-color: rgb(214, 223, 231);" class="form-control">
+
+    <div class="form-group">
     
+    
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <span class="form-label">Flying from</span>
+          <i class="fas fa-plane-departure"></i>
+          <input class="form-control" id="myInput8" name="from" type="text" placeholder="City or airport">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <span class="form-label">Flyning to</span>
+          <i class="fas fa-plane-departure"></i>
+          <input class="form-control"  id="myInput9" name="to" type="text" placeholder="City or airport">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <span class="form-label">Departing</span>
+          <input class="form-control" name="depart" type="date" required>
+        </div>
+      </div>
+     
+      <div class="col-md-2">
+        <div class="form-group">
+          <span class="form-label">Adults (18+)</span>
+          <select class="form-control" name="adults">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+          </select>
+          <span class="select-arrow"></span>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <span class="form-label">Children (0-6)</span>
+          <select class="form-control" name="children">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+          </select>
+          <span class="select-arrow"></span>
+        </div>
+      </div>
+      <div class="col-md-2">
+       <div class="form-group">
+         <span class="form-label">Type</span>
+         <select class="form-control" name="type">
+           <option>Business</option>
+           <option>Economy</option>
+          
+         </select>
+         <span class="select-arrow"></span>
+       </div>
+     </div>
+    <div class="row">
+  
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <span class="form-label">Name</span>
+          <input class="form-control" type="text" name="name" placeholder="Enter Your Name">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <span class="form-label">Email</span>
+          <input class="form-control" type="email" name="email" placeholder="Enter Your email">
+        </div>
+      </div>
+      <div class="col-md-3">
+    
+          <button class="btn btn-primary" type="submit" style="margin-left: 8px; margin-top : 25px; font-family: 'Heebo';">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
 </div>
 </div>
+
+
+
+
+<!-- multi-city -->
+
+
+<div class="container my-5" id="show3">
+
+  <div  class="alert alert-warning alert-dismissible fade show" role="alert">
+    <p>If you select only 2 please type none to 3rd one</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <p>Multi-city</p> 
+
+<form name="google-sheet2"  method="post" autocomplete="off" style="background-color: rgb(214, 223, 231);" class="form-control">
+
+    <div class="form-group">
+    
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <span class="form-label">Flying from</span>
+          <i class="fas fa-plane-departure"></i>
+          <input class="form-control" id="myInput6" name="city1 from" type="text" placeholder="City or airport">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <span class="form-label">Flyning to</span>
+          <i class="fas fa-plane-departure"></i>
+          <input class="form-control"  id="myInput7" name="city1 to" type="text" placeholder="City or airport">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <span class="form-label">Departing</span>
+          <input class="form-control" name="depart1" type="date" required>
+        </div>
+      </div>
+    </div>
+
+   
+
+    <div class="row">
+       <div class="col-md-4">
+         <div class="form-group">
+           <span class="form-label">Flying from</span>
+           <i class="fas fa-plane-departure"></i>
+           <input class="form-control" id="myInput2" name="city2 from" type="text" placeholder="City or airport">
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="form-group">
+           <span class="form-label">Flyning to</span>
+           <i class="fas fa-plane-departure"></i>
+           <input class="form-control"  id="myInput3" name="city2 to" type="text" placeholder="City or airport">
+         </div>
+       </div>
+       <div class="col-md-4">
+        <div class="form-group">
+          <span class="form-label">Departing</span>
+          <input class="form-control" name="depart2" type="date" required>
+        </div>
+      </div>
+     </div>
+
+
+     <div class="row">
+       <div class="col-md-4">
+         <div class="form-group">
+           <span class="form-label">Flying from</span>
+           <i class="fas fa-plane-departure"></i>
+           <input class="form-control" id="myInput4" name="city3 from" type="text" placeholder="City or airport">
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="form-group">
+           <span class="form-label">Flyning to</span>
+           <i class="fas fa-plane-departure"></i>
+           <input class="form-control"  id="myInput5" name="city3 to" type="text" placeholder="City or airport">
+         </div>
+       </div>
+       <div class="col-md-4">
+        <div class="form-group">
+          <span class="form-label">Departing</span>
+          <input class="form-control" name="depart3" type="date" required>
+        </div>
+      </div>
+     </div>
+
+
+    <div class="row">
+      
+      <div class="col-md-2">
+        <div class="form-group">
+          <span class="form-label">Adults (18+)</span>
+          <select class="form-control" name="adults">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+          </select>
+          <span class="select-arrow"></span>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <span class="form-label">Children (0-6)</span>
+          <select class="form-control" name="children">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+          </select>
+          <span class="select-arrow"></span>
+        </div>
+      </div>
+      <div class="col-md-2">
+       <div class="form-group">
+         <span class="form-label">Type</span>
+         <select class="form-control" name="type">
+           <option>Business</option>
+           <option>Economy</option>
+          
+         </select>
+         <span class="select-arrow"></span>
+
+
+
+
+
+
+
+
+       </div>
+
+
+       
+     </div>
+     <div class="col-md-3">
+      <div class="form-group">
+        <span class="form-label">Name</span>
+        <input class="form-control" type="text" name="name" placeholder="Enter Your Name">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <span class="form-label">Email</span>
+        <input class="form-control" type="email" name="email" placeholder="Enter Your email">
+      </div>
+    </div>
+     </div>
+    <div class="row">
+  
+
+     
+      <div class="col-md-3">
+    
+          <button class="btn btn-primary" type="submit" style="margin-left: 8px; margin-top : 25px; font-family: 'Heebo';">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>
+</div>
+
+
 
 
 
@@ -374,68 +670,81 @@
   
     <div class="accordion accordion-flush border-top border-start border-end my-5" id="myAccordion">
         <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"> Where can I get the latest info for my booking?</button> </h2>
+            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">ABOUT VOLO AND REFERENCES</button> </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse border-0" aria-labelledby="flush-headingOne" data-bs-parent="#myAccordion">
                 <div class="accordion-body p-0">
-               
-                    <div classa="card-body">
-                      The situation is evolving every day. To get the latest info about your booking or contact us, sign in to your Booking.com account. If you don't have an account, use your booking confirmation number and PIN to sign in on a desktop or laptop. Due to current circumstances, it may take us longer than usual to respond to your questions and requests. Thanks for your patience.
-                    </div>
+                  <div class="card-body">
+                    <b>WE ARE FLIGHT BOOKING EXPERTS</b>
+<br><br>
+Volo Booking, in collaboration with many Flights Only companies, is a new niche and unique travel agency specialized specifically and only in international business class and first-class flights, offering high expertise, friendly-efficient customer service and unpublished prices, not available online. We beat any websites such as Kayak, Booking.com, Expedia, Google Flights etc., as well as prices offered on the airline’s websites. Unlike other travel agencies, our service is entirely free. The airlines compensate us with commissions for every flight sold through us. 
+Our customers are from all across the nation and from different industries. 
+We currently work mainly with doctors and professors from hospitals and universities such as Harvard, NYU, UCLA and Boston University, with actors, artists and managers of major talent agencies in Los Angeles and New York, as well as CEO's and their assistants of various industries. 
+<br><br>
+Yes, we do provide references. <br><br>
+OUR GREATEST SATISFACTION AND SUCCESS COMES IN SERVING SATISFIED CLIENTS WHO ARE LOOKING TO EXPERIENCE AIRFARE BOOKING SERVED WITH COMPETENCE, PROFESSIONALISM AND AT A LOWER RATE.
+
+                  </div>
                 </div>
             </div>
         </div>
         <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">How do I change or cancel my booking in this situation?</button> </h2>
+            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">HOW DOES VOLO FIND SUCH LOW FLIGHT PRICES?</button> </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse border-0" aria-labelledby="flush-headingOne" data-bs-parent="#myAccordion">
                 <div class="accordion-body p-0">
                   <div class="card-body">
-                    For the best support, sign in to your Booking.com account. If you don't have an account, use your booking confirmation number and PIN to sign in on a desktop or laptop.
-If your booking is no longer free to cancel or non-refundable, you may incur a cancellation fee. You can contact the property to see if it's possible to change the dates of your booking or cancel it.
-If your booking was affected by coronavirus-related events (e.g. border closures or travel limitations set by authorities) but is no longer free to cancel or non-refundable, sign in to check the options for managing the booking.
+                   <b> LOW PRICES: HOW CAN YOUR AGENCY OFFER AIRFARES THAT ARE LOWER THAN THE ONES PUBLISHED ONLINE OR THE AIRLINE'S PUBLISHED FARES? </b> <br><br>
+                    VOLO works directly with sales directors at the airlines, as well as with the best consolidators and wholesalers of airline tickets. These companies processes over 15 million flights annually over hundreds of airlines and third party sites, allowing it to find a variety of flight prices and options.
+                    With our relationships at the airlines, we are able to offer unbeatable, unpublished prices that are not offered online or direct via the airline's website. <br> <br>
+                    The lowest fare the general public is asked to pay online or via the airline’s websites, are not always necessarily indicative of the “lowest possible airfare”. Airline tickets consolidators for example, purchase a large number of tickets and as such, they receive a heavily discounted bulk rate fare on each ticket. Since they purchase these tickets for less than retail, they are also willing to sell airline tickets at less than retail. Our agents have exclusive access to these special fares, as well as to unsold inventory fares that are not published or offered to the general public.
+                    
+                    
                   </div>
                 </div>
             </div>
         </div>
         <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">What is the policy for date changes or cancellations related to coronavirus?</button> </h2>
+            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">BOOKING TIME</button> </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse border-0" aria-labelledby="flush-headingOne" data-bs-parent="#myAccordion">
                 <div class="accordion-body p-0">
                   <div class="card-body">
-                    You chose a policy when you made the booking on our platform. If that policy allows a change of dates or free cancellation, you're entitled to that.
-                    For bookings made before April 6, 2020: You may be able to change or cancel your (non-refundable) booking for free if you can't travel to or stay at the property due to implications of the coronavirus (COVID-19) outbreak (e.g. government travel restrictions, closed borders). This depends on several factors, including your country of origin, your destination, the date that you made your booking, your departure date, your arrival date, and your reason for traveling. If your booking falls within a category above, the property should allow your date change request or cancellation. If you want to cancel your booking and have already made a prepayment, the property should offer you credit or a voucher for a future stay. If you'd prefer to receive a refund, you're entitled to that also.
-                    For bookings made on or after April 6, 2020: Your change/cancellation request will be handled by the property. The policy you chose and mandatory consumer laws, where applicable, are relevant.
-                    Sign in and select the relevant booking to see your options.
+                   <b>WHEN SHOULD I BOOK AND HOW ARE TICKETS ISSUED?</b>  <br> <br>
+                    The earlier you know your travel dates and contact VOLO, the greater the chance to save. When the agents at VOLO are able to fill a seat that might otherwise go unsold, they can broker and barter from a higher position to generate the maximum allowable discount for your ticket. Seat prices are based on the airline’s profitability and on availability. <br> <br>
+                    All airline tickets are handled exactly the same way as with any other travel agencies or as if purchased directly from any airline’s website or online booking agencies. The tickets will be issued and delivered electronically. You will receive your ticket confirmation codes along with the record locator and ticket number. Just as you normally would. You can then log in online, check your flight status, change your seat, and add all other special requests you might have. VOLO usually does that for you based on your likes and dislikes. VOLO will also assign seating based on your personal preferences, if available. 
+                    
                   </div>
                 </div>
             </div>
         </div>
         <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">Can I cancel my booking?</button> </h2>
+            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">TICKET CHANGES & CANCELLATIONS</button> </h2>
             <div id="flush-collapseFour" class="accordion-collapse collapse border-0" aria-labelledby="flush-headingOne" data-bs-parent="#myAccordion">
                 <div class="accordion-body p-0">
                   <div class="card-body">
-                    Yes – any cancellation fees are determined by the property and listed in your cancellation policy. You'll pay any additional costs to the property.
+                  <b>  This part is handled by the airlines, and their rules and fees will apply.</b>  <br> <br>
+                    VOLO will still take care of everything for you, saving you long hold times on the phone. But VOLO does not charge a change or cancellation fee. The airline/booking agency will. Change and cancellation fees will vary depending on the ticket fare rules and conditions of the particular ticket and airline policies. Usually, a date change fee is $495 plus a fare difference if applicable. For cancellations and refunds, a cancellation fee will be applied by the airline/booking agency following airline/booking agency policy and ticket fare rules. 
+                    
                   </div>
                 </div>
             </div>
         </div>
         <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">Can I pay with a deposit, or prepayment?</button> </h2>
+            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">WHAT FORMS OF PAYMENT DOES VOLO ACCEPT?</button> </h2>
             <div id="flush-collapseFive" class="accordion-collapse collapse border-0" aria-labelledby="flush-headingOne" data-bs-parent="#myAccordion">
                 <div class="accordion-body p-0">
                   <div class="card-body">
-                    Some of our properties require a prepayment (i.e. a deposit) before you stay. This prepayment consist of the total cost of the booking or just part of it. The rest is paid when you stay at the property.
-However, for some properties, there is no deposit required. You pay the amount in full when you stay at the property. Be sure to check the payment policies in your confirmation for more details.
+                    You can pay with all major credit cards.  <br>
+                    Visa, MasterCard, Discover, and American Express.
+                    
                   </div>
                 </div>
             </div>
         </div>
         <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">How do I get more info about the room or property's facilities?</button> </h2>
+            <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">DO TICKETS SOLD THROUGH VOLO ACCRUE MILES?</button> </h2>
             <div id="flush-collapseSix" class="accordion-collapse collapse border-0" aria-labelledby="flush-headingOne" data-bs-parent="#myAccordion">
                 <div class="accordion-body p-0">
                   <div class="card-body">
-                    You can find the room and property facilities in your booking confirmation.
+                    Yes, definitely. You will accrue miles. Our tickets are ticketed by the airlines directly. We do not use or work with miles to purchase your tickets. We also don't do miles upgrades. We book tickets directly from the airline's ticketing office. 
                   </div>
                 </div>
             </div>
@@ -692,7 +1001,8 @@ However, for some properties, there is no deposit required. You pay the amount i
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2022 Copyright:
-      <a class="text-white" href="https://volobooking.netlify.app/">volobooking.netlify.app</a>
+      <a class="text-white" href="https://volobooking.netlify.app/">
+        volobooking.com</a>
     </div>
     <!-- Copyright -->
   </footer>
@@ -707,6 +1017,40 @@ However, for some properties, there is no deposit required. You pay the amount i
    -->
    <script src="index.js"></script>
    <script type="text/javascript">
+
+
+
+
+
+   
+  show1 = document.getElementById("show1")
+  show2 = document.getElementById("show2")
+  show3 = document.getElementById("show3")
+
+  show2.style.display = "none";
+  show3.style.display = "none";
+
+  function myfunc1(){
+    show2.style.display = "none";
+    show3.style.display = "none";
+    show1.style.display = "block";
+  }
+
+  function myfunc2(){
+    show1.style.display = "none";
+    show3.style.display = "none";
+    show2.style.display = "block";
+  }
+
+
+  function myfunc3(){
+    show1.style.display = "none";
+    show2.style.display = "none";
+    show3.style.display = "block";
+  }
+
+
+
      function myFunction() {
        document.getElementById("myDate").value = "2014-02-09";
      }
@@ -746,19 +1090,61 @@ $(function(){
 })
 
 
+const scriptURL3 = 'https://script.google.com/macros/s/AKfycbyRw_mXPPbtSMJSXtBvH0gbNFOr05rxF-S3mHdW-sHNAT37ojJj6eu-umqPjS99340c/exec'
+const form3 = document.forms['google-sheet3']
+
+form3.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL3, { method: 'POST', body: new FormData(form3)})
+    .then(response => {
+      alert("Thanks for Contacting us..! We Will Contact You Soon...")
+      var frm = document.getElementsByName('google-sheet3')[0];
+      frm.reset();  // Reset all form data
+      return false; 
+     
+    })
+    .catch(error => alert("error!! Please Try again")) 
+})
+
+
+
+
+
+
 const scriptURL1 = 'https://script.google.com/macros/s/AKfycbzePUlThesickFbs7ppnODCSBk2Oxk9_xqHFN0j6j0jfkkAWD_Lb-MhXO4n8qYucSX_/exec'
 const form1 = document.forms['contact-form']
 
 form1.addEventListener('submit', e => {
   e.preventDefault()
   fetch(scriptURL1, { method: 'POST', body: new FormData(form1)})
-    .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-    .catch(error => alert("You Are Already Registered!!")) 
+    .then(response => {
+      alert("Thanks for Contacting us..! We Will Contact You Soon...")
+      var frm = document.getElementsByName('contact-form')[0];
+      frm.reset();  // Reset all form data
+      return false; 
+     
+    })
+    .catch(error => alert("error!! Please Try again")) 
 })
 
 
 
 
+const scriptURL2 = 'https://script.google.com/macros/s/AKfycbydzVqmJ0AjizaWbWsc_82nCp5n7mkWfIxpPIg0fOF24FPXAFAtwefbPvvr_7-2wv55PQ/exec'
+const form2 = document.forms['google-sheet2']
+
+form2.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+    .then(response => {
+      alert("Thanks for Contacting us..! We Will Contact You Soon...")
+      var frm = document.getElementsByName('google-sheet2')[0];
+      frm.reset();  // Reset all form data
+      return false; 
+     
+    })
+    .catch(error => alert("error!! Please Try again")) 
+})
 
 
 
@@ -770,8 +1156,14 @@ form1.addEventListener('submit', e => {
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-      .catch(error => alert("You Are Already Registered!!")) 
+      .then(response => {
+        alert("Thanks for Contacting us..! We Will Contact You Soon...")
+        var frm = document.getElementsByName('google-sheet')[0];
+        frm.reset();  // Reset all form data
+        return false; 
+       
+      } )
+      .catch(error => alert("error!! Please Try again")) 
   })
 
   function submitForm() {
@@ -896,6 +1288,14 @@ form1.addEventListener('submit', e => {
 autocomplete(document.getElementById("myInput"), countries);
 
 autocomplete(document.getElementById("myInput1"), countries);
+autocomplete(document.getElementById("myInput2"), countries);
+autocomplete(document.getElementById("myInput3"), countries);
+autocomplete(document.getElementById("myInput4"), countries);
+autocomplete(document.getElementById("myInput5"), countries);
+autocomplete(document.getElementById("myInput6"), countries);
+autocomplete(document.getElementById("myInput7"), countries);
+autocomplete(document.getElementById("myInput8"), countries);
+autocomplete(document.getElementById("myInput9"), countries);
 
 
      </script>
